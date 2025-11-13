@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import "./index.css";
 import axios from "axios";
+import {login} from "../api/auth";
 
 export default function App() {
   const [view, setView] = useState("login"); // login | signup | users
@@ -25,6 +26,7 @@ export default function App() {
   // Login
   const handleLogin = async (e) => {
     e.preventDefault();
+    login({email, password})
     
   };
 
